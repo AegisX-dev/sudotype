@@ -1,0 +1,54 @@
+# sudotype ⚡
+
+An interactive, high-performance terminal-based typing trainer designed to help developers and systems administrators master terminal commands, syntax, options, and shell scripts. It's a hacker-themed typing coach (similar to Monkeytype but built natively for CLI workflows).
+
+---
+
+## 🚀 Key Features
+
+* **Zero-Latency Captured Input:** Runs in low-level terminal Raw Mode (`process.stdin.setRawMode`) capturing keypresses with instant response time and no input lag.
+* **Premium Retro CLI Aesthetics:** Built using clean, custom ANSI escape sequences for full coloring (Green for success, White on Red for typos, Dim Grey for untyped chars).
+* **Real-time Live Telemetry HUD:** Displays Net WPM, Raw WPM, Accuracy (%), and a dynamically refreshing elapsed time counter.
+* **Inline Shell Comment Hints:** Visually aligns UNIX-style shell comments on the right side (`# Hint`) explaining exactly what each target command does.
+* **Dynamic Progress Bar:** Renders a clean progress bar showing graphical completion using unicode block chars (`████████▒▒▒`).
+* **Instant Hot-run Dev Setup:** Integrated with `tsx` to run TypeScript files instantly without waiting for compile runs during iteration.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+* **Language:** Strictly Typed TypeScript (configured for clean ESM imports & `isolatedModules` / `verbatimModuleSyntax`).
+* **Runtime:** Node.js (v18+) or Bun.
+* **Package Manager:** `pnpm`.
+* **Renderer:** Pure ANSI screen buffer drawer (no heavy external component packages or visual stutters).
+
+---
+
+## ⚙️ Quick Start Guide
+
+### 1. Installation
+Clone the repository and install the development dependencies:
+```bash
+git clone https://github.com/AegisX-dev/sudotype.git
+cd sudotype
+pnpm install
+```
+
+### 2. Scripts Overview
+
+* **Development (Hot-run):** Runs the typing trainer instantly.
+  ```bash
+  pnpm run dev
+  ```
+* **Production Build:** Compiles TypeScript source files from `/src` into `/dist`.
+  ```bash
+  pnpm run build
+  ```
+
+---
+
+## 🎮 Interactive Controls
+
+* **`Ctrl+C`**: Safely quits the trainer and restores your native terminal settings (reveals system cursor).
+* **`Ctrl+R`**: Resets your typing state instantly and loads the next random terminal command.
+* **`Backspace`**: Allows editing and correcting typos instantly.
