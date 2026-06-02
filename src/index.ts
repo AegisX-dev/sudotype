@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { getRandomCommand } from "./engine/text-library.js";
 import { createInitState, handleKeyPress } from "./engine/game-engine.js";
 import { render, cleanupTerminal } from "./ui/renderer.js";

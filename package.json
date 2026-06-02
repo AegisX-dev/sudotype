@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "bin": {
+    "sudotype": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
