@@ -4,6 +4,30 @@ import { createInitState, handleKeyPress } from "./engine/game-engine.js";
 import { render, cleanupTerminal } from "./ui/renderer.js";
 import type { GameState } from "./engine/types.js";
 
+const args = process.argv.slice(2);
+if (args.includes("--help") || args.includes("-h")) {
+  console.log(`
+  ⚡ S U D O T Y P E ⚡ [CLI Hacker Typing Trainer]
+
+  Usage:
+    sudotype [options]
+
+  Options:
+    -h, --help      Show this help menu
+    -v, --version   Show version information
+
+  Controls during test:
+    Ctrl+R          Restart test or load next command
+    Ctrl+C          Exit the application
+  `);
+  process.exit(0);
+}
+
+if (args.includes("--version") || args.includes("-v")) {
+  console.log("sudotype version 1.0.1");
+  process.exit(0);
+}
+
 const initialCmd = getRandomCommand();
 let state: GameState = createInitState(initialCmd.text, initialCmd.description);
 let tickTimer: NodeJS.Timeout | null = null;
