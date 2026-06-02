@@ -26,24 +26,41 @@ An interactive, high-performance terminal-based typing trainer designed to help 
 
 ## ⚙️ Quick Start Guide
 
-### 1. Installation
-Clone the repository and install the development dependencies:
+### 1. Global Installation (via npm)
+Install the package globally on your system to run it from any directory:
 ```bash
-git clone https://github.com/AegisX-dev/sudotype.git
-cd sudotype
-pnpm install
+npm install -g sudotype
+```
+Once installed, simply run:
+```bash
+sudotype
 ```
 
-### 2. Scripts Overview
+Alternatively, you can run it on-the-fly without installation:
+```bash
+npx sudotype
+```
 
-* **Development (Hot-run):** Runs the typing trainer instantly.
-  ```bash
-  pnpm run dev
-  ```
-* **Production Build:** Compiles TypeScript source files from `/src` into `/dist`.
-  ```bash
-  pnpm run build
-  ```
+### 2. Local Development & Testing
+If you want to run it locally or contribute:
+1. Clone the repository and install dependencies:
+   ```bash
+   git clone https://github.com/AegisX-dev/sudotype.git
+   cd sudotype
+   pnpm install
+   ```
+2. Run the hot-reloading development runner:
+   ```bash
+   pnpm run dev
+   ```
+3. Compile the production bundle:
+   ```bash
+   pnpm run build
+   ```
+4. Install your local modified package globally for testing:
+   ```bash
+   pnpm add -g .
+   ```
 
 ---
 
