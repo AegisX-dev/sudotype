@@ -26,23 +26,43 @@ An interactive, high-performance terminal-based typing trainer designed to help 
 
 ## ⚙️ Quick Start Guide
 
-### 1. Global Installation (via npm)
-Install the package globally on your system to run it from any directory:
+### 1. Installation via Homebrew (macOS / Linux)
+Install `sudotype` natively on your system using Homebrew by tapping the official tap:
 ```bash
-npm install -g sudotype
+brew tap aegis-dev/tap
+brew install sudotype
 ```
-Once installed, simply run:
+To build and install the latest master development branch directly from source:
 ```bash
-sudotype
+brew install --HEAD aegis-dev/tap/sudotype
 ```
 
-Alternatively, you can run it on-the-fly without installation:
+### 2. Global Installation (via npm / pnpm)
+Install it globally using your preferred Node.js package manager:
+```bash
+# Using pnpm
+pnpm add -g sudotype
+
+# Using npm
+npm install -g sudotype
+```
+To run it on-the-fly without a global installation:
 ```bash
 npx sudotype
 ```
 
-### 2. Local Development & Testing
-If you want to run it locally or contribute:
+### 3. CLI Arguments & Options
+`sudotype` supports standard Unix query flags. These run safely and exit with status code `0` without invoking raw terminal events or TUI drawing:
+```bash
+# Display the current version
+sudotype --version   # or -v
+
+# Display the usage and help menu
+sudotype --help      # or -h
+```
+
+### 4. Local Development & Contributing
+If you want to contribute or build/test it locally:
 1. Clone the repository and install dependencies:
    ```bash
    git clone https://github.com/AegisX-dev/sudotype.git
