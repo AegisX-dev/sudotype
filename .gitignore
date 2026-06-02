@@ -30,3 +30,5 @@ pnpm-debug.log*
 # Local Agent Tracking
 session_state.md
 feature_ideas.md
+marketing_agent_prompt.md
+engineering_agent_prompt.md
