@@ -26,3 +26,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Local Agent Tracking
+session_state.md
+feature_ideas.md
