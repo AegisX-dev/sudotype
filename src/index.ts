@@ -24,7 +24,7 @@ if (args.includes("--help") || args.includes("-h")) {
 }
 
 if (args.includes("--version") || args.includes("-v")) {
-  console.log("sudotype version 1.0.1");
+  console.log("sudotype version 1.0.2");
   process.exit(0);
 }
 

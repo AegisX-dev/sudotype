@@ -2,7 +2,7 @@ class Sudotype < Formula
   desc "Retro hacker-themed terminal typing trainer"
   homepage "https://github.com/aegis-dev/sudotype"
   # To install via NPM registry tarball once published:
-  url "https://registry.npmjs.org/sudotype/-/sudotype-1.0.1.tgz"
+  url "https://registry.npmjs.org/sudotype/-/sudotype-1.0.2.tgz"
   sha256 "0000000000000000000000000000000000000000000000000000000000000000" # Update with actual SHA256 after publish
   license "ISC"
 
